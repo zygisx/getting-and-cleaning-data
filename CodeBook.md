@@ -18,7 +18,7 @@ The `run_analysis.R` script performs the following actions to clean up the data:
 **2. Extracts only the measurements on the mean and standard deviation for each measurement.**
   
   - reads data from `UCI HAR Dataset/features.txt` into data frame `features`
-  - from `features` takes only those values that has *mean* or *std* in its name and store in vector `mean_std_features`
+  - from `features` takes only those values that has *meani()* or *std()* in its name and store in vector `mean_std_features`
   - filter data frame `x` columns, after this step data frame `x` contains only columns mentioned in `mean_std_features` vector
   
 **3. Uses descriptive activity names to name the activities in the data set**
@@ -34,8 +34,7 @@ The `run_analysis.R` script performs the following actions to clean up the data:
   - merges `y` data frame with activities. Now `y` data set contains descriptove activity names instead of unreadable activity ids.
 
 **4. Appropriately labels the data set with descriptive variable names.**
-  - data frame `y` labeled with variable names like: `tbodyacc-mean-x` `tbodyacc-mean-y` `tbodyacc-mean-z` `tbodyacc-std-x` `tbodyacc-std-y` `tbodyacc-std-z` and so on. Total ir has 
-    ### TODO remove meanfreq add count columns
+  - data frame `y` labeled with variable names like: `tbodyacc-mean-x` `tbodyacc-mean-y` `tbodyacc-mean-z` `tbodyacc-std-x` `tbodyacc-std-y` `tbodyacc-std-z` and so on. Total ir has 66 columns.
   - data frame `y` single variable names `activity`
   - data frame `subject` single variable names `subject`
   - all previously mentioned data frames `x`, `y` and 'subject' merged to single data frame called `merged`
