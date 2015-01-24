@@ -21,11 +21,6 @@ features <- read.table("UCI HAR Dataset//features.txt")
 mean_std_features <- grep("*mean*|*std*", features[,2])
 x <- x[, mean_std_features]
 
-# reset column names to be more desciptive
-col_names <- features[mean_std_features, 2]
-col_names <- gsub("\\(\\)", "", tolower(col_names))
-names(x) <- col_names
-
 
 # 3. Uses descriptive activity names to name the activities in the data set
 
