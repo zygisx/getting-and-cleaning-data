@@ -42,4 +42,6 @@ The `run_analysis.R` script performs the following actions to clean up the data:
   - this data frame saved to text file `merged.txt`
   
 **5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.**
+  - created new data frame `averages` that contains all data from `merged` data frame grouped by `activity` and `subject` and calculated mean for all other variables.
+  - newly created dataframe `averages` saved to data file `averages.txt`
 
